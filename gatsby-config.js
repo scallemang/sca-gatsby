@@ -7,6 +7,14 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
+      resolve: `gatsby-source-graphql`,
+      options: {
+        typeName: `WPGraphql`,
+        fieldName: `wpgraphql`,
+        url: `https://scallemang.ca/graphql`,
+      }
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
